@@ -10,7 +10,12 @@ class Note extends Model
 {
     use HasFactory, HasUuids;
 
-    protected $fillable = [
-        ""
+    protected $guarded = [
+        'id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

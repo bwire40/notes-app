@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +19,7 @@ class NoteFactory extends Factory
     {
         return [
             //
+            'user_id' => User::inRandomOrder()->first()->id,
             'title' => $this->faker->sentence(),
             'body' => $this->faker->text(),
             'send_date' => $this->faker->date()

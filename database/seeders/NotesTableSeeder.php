@@ -13,13 +13,6 @@ class NotesTableSeeder extends Seeder
      */
     public function run(): void
     {
-        // //
-        // Note::create([
-        //     'title' => "this is a title",
-        //     'body' => "this is a body",
-        //     'send_date' => now()
-        // ]);
-
         Note::factory(10)->create();
     }
 }
